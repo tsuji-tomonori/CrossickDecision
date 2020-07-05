@@ -25,6 +25,7 @@ pathes = [(p, class_indices[cl]) for cl in class_name
             for p in (target_dir / cl).iterdir() if p.suffix in SUFFIX]
 random.shuffle(pathes)
 
+# main loop
 for idx, p in enumerate(pathes):
     img = cv2.imread(str(p[0]))
     x[idx,] = cv2.resize(img, shape_tuple)
